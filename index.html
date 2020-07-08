@@ -14,27 +14,42 @@
 
 <body>
     <header>
-        <div class="gutter-right logo">
-            <img src="assets/big-logo.png"/>
-        </div>
+        Welcome to my Rock Paper Scissors game!
     </header>
     <main>
+        <section>
+            <ul>
+                <li>Paper beats Rock</li>
+                <li>Rock beats Scissors</li>
+                <li>Scissors beats Paper</li>
+            </ul>
+        </section>
         <section>
             <label>
                 Rock
                 <input type="radio" name='game'
                 value="Rock" checked/>
+                <iframe src="https://giphy.com/embed/123nrTcg9bHnPi" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </label>
             <label>
-                Papper
+                Paper
                 <input type="radio" name='game'
-                value="Papper" checked/>
+                value="Paper" checked/>
+                <iframe src="https://giphy.com/embed/gauzBevJxeJHy" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </label>
             <label>
                 Scissors
                 <input type="radio" name='game'
                 value="Scissors" checked/>
+                <iframe src="https://giphy.com/embed/84De6jiojN1hS" width="300" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
             </label>
+            <button id='play-button'>Play</button>
+        </section>
+        <section>
+            <div id='current'></div>
+            <div id='wins'></div>
+            <div id='losses'></div>
+            <div id='total'></div>
         </section>
         
     </main>
