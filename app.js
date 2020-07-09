@@ -6,6 +6,7 @@ const lossSpan = document.querySelector('#losses');
 const totalSpan = document.querySelector('#total');
 const drawSpan = document.querySelector('#draw');
 const resetButton = document.getElementById('reset-button');
+const resetSpan = document.querySelector('#reset');
 // initialize state
 let draw = 0;
 let wins = 0;
@@ -38,6 +39,8 @@ button.addEventListener('click', () => {
     lossSpan.textContent = `loss=${loss}`;
     totalSpan.textContent = `total=${total}`;
     drawSpan.textContent = `draw=${draw}`;
+    // Need to connect the reset span 
+    // resetSpan.textContent = `reset=${reset}`;
 
 });
 
