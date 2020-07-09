@@ -12,6 +12,7 @@ let draw = 0;
 let wins = 0;
 let total = 0;
 let loss = 0;
+let reset = 0;
 
 // set event listeners to update state and DOM
 button.addEventListener('click', () => {
@@ -40,7 +41,6 @@ button.addEventListener('click', () => {
     totalSpan.textContent = `total=${total}`;
     drawSpan.textContent = `draw=${draw}`;
     // Need to connect the reset span 
-    // resetSpan.textContent = `reset=${reset}`;
 
 });
 
@@ -48,10 +48,23 @@ const resetPage = () => {
     const userChoice = window.confirm('Are you sure?');
 
     if (userChoice === true) {
-        document.location.reload();
+        /* document.location.reload(); */
+        draw = 0;
+        wins = 0;
+        total = 0;
+        loss = 0;
+        winSpan.textContent = `wins=${wins}`;
+        lossSpan.textContent = `loss=${loss}`;
+        totalSpan.textContent = `total=${total}`;
+        drawSpan.textContent = `draw=${draw}`;
     } else {
         return false;
     }
 };
 
-resetButton.addEventListener('click', resetPage);
+resetButton.addEventListener('click', () => {
+    resetPage();
+    reset++;
+    console.log(reset);
+    resetSpan.textContent = `reset=${reset}`;
+});
