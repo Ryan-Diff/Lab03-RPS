@@ -1,5 +1,5 @@
 export function getRandomThrow() {
-    let value = math.ceil(math.random() * 3);
+    let value = Math.ceil(Math.random() * 3);
 
     if (value === 1) {
         return value = 'rock';
