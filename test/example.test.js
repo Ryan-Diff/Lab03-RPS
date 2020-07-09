@@ -1,11 +1,11 @@
 // IMPORT MODULES under test here:
-import { getRandomThrow } from './r-p-g.js';
+import { getRandomThrow } from '../r-p-g.js';
 
 
 const test = QUnit.test;
 
 
-test('it should take in a number and return that number squared', function(assert) {
+test('it should take in a number and return that number squared', (assert) => {
     //Arrange
     // Set up your parameters and expectations
     const expected = true;
