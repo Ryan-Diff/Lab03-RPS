@@ -16,18 +16,22 @@ button.addEventListener('click', () => {
     const player = document.querySelector('input:checked');
 
     let choice = player.value;
-    console.log(choice);
+    // console.log(choice);
     let computer = getRandomThrow();
-    console.log(computer);
+    // console.log(computer);
 
     let game = checkResults(choice, computer);
-    if (game === 'wins') {
+    if (game === 'win') {
         wins ++;
         total ++;
     } else if (game === 'draw') {
-    } else {
+        draw ++;
+        total ++;
+
+    } else if (game === 'loss') {
         loss++;
         total++;
+        
     } 
     winSpan.textContent = `wins=${wins}`;
     lossSpan.textContent = `loss=${loss}`;
